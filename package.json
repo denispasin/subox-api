@@ -1,0 +1,10 @@
+{
+  "name": "subox_api",
+  "author": "Denis <Zaratan> Pasin <denis@pasin.fr>",
+  "scripts": {
+    "precommit": "rspec --format progress && rubocop"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3"
+  }
+}

@@ -7,20 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = "subox_api"
   spec.version       = SuboxApi::VERSION
   spec.authors       = ["Denis <Zaratan> Pasin"]
-  spec.email         = ["denis.pasin@autodesk.com"]
+  spec.email         = ["denis@pasin.fr"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
-
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
+  spec.summary       = 'A gem to interface with api.subox.co'
+  spec.homepage      = "https://github.com/denispasin/subox_api"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
@@ -30,5 +20,14 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.16"
+  spec.add_development_dependency 'faker'
+  spec.add_development_dependency "guard-rspec"
+  spec.add_development_dependency "nyan-cat-formatter"
+  spec.add_development_dependency 'pry-byebug'
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rspec", "~> 3.7"
+  spec.add_development_dependency "rspec_junit_formatter"
+  spec.add_development_dependency "rubocop", "= 0.52.1"
+  spec.add_development_dependency 'simplecov'
+  spec.add_development_dependency "vcr"
 end

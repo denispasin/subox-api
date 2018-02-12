@@ -22,7 +22,35 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Initialization
+
+```ruby
+client = SuboxApi::Client.new(url: "http://0.0.0.0:3000", username: "XXX", password: "XXX")
+```
+
+The url is optional and by default target https://api.subox.co
+
+### Response format
+
+Each API response are wrapped into a Struct with preparsed body.
+* **data**: contain a ruby object constructed with the JSON parse of the body
+* **response**: contains the original Faraday response
+
+### Boxes
+
+```ruby
+# Get all boxes
+response = client.boxes.all
+response.data = [{
+  "id"=>"ff540b4a-8c41-428a-a176-7b16834efd07",
+  "title"=>"spectral madness nameless",
+  "description"=>"You want weapons? We're in a library! Books! The best weapons in the world!",
+  "short_description"=>"unutterable swarthy charnel",
+  "suggestion_type"=>"Hastur",
+  "created_at"=>"2018-02-04T21:13:36.276Z",
+  "created_by"=>"Skizzk"
+  }]
+```
 
 ## Development
 

@@ -19,6 +19,8 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "faraday", "~> 0.14"
+
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency 'faker'
   spec.add_development_dependency "guard-rspec"
@@ -30,4 +32,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rubocop", "= 0.52.1"
   spec.add_development_dependency 'simplecov'
   spec.add_development_dependency "vcr"
+  spec.add_development_dependency 'webmock'
 end

@@ -1,0 +1,109 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://0.0.0.0:3000/auth/sign_in
+    body:
+      encoding: UTF-8
+      string: login=Skizzk&password=12345678
+    headers:
+      User-Agent:
+      - Faraday v0.14.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Access-Token:
+      - BN5UK37-zQPprWw1QTd8jg
+      Token-Type:
+      - Bearer
+      Client:
+      - YfH6c2gX2ex4Jz4iXP3egA
+      Expiry:
+      - '1519607940'
+      Uid:
+      - denis.pasin@gmail.com
+      Etag:
+      - W/"ecf3a9d9a80e4a021d1124d8ed43ff6a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c46cb028-6b5d-4831-b7e1-a3b0c9e9422a
+      X-Runtime:
+      - '0.423690'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"bbb0cfaa-4ccb-48e6-b1b8-302d929278a6","email":"denis.pasin@gmail.com","provider":"email","username":"Skizzk","uid":"denis.pasin@gmail.com","confirmed_at":null}}'
+    http_version: 
+  recorded_at: Mon, 12 Feb 2018 01:19:00 GMT
+- request:
+    method: get
+    uri: http://0.0.0.0:3000/v1/boxes
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.14.0
+      Access-Token:
+      - BN5UK37-zQPprWw1QTd8jg
+      Client:
+      - YfH6c2gX2ex4Jz4iXP3egA
+      Expiry:
+      - '1519607940'
+      Token-Type:
+      - bearer
+      Uid:
+      - denis.pasin@gmail.com
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Access-Token:
+      - ''
+      Token-Type:
+      - Bearer
+      Client:
+      - YfH6c2gX2ex4Jz4iXP3egA
+      Expiry:
+      - ''
+      Uid:
+      - denis.pasin@gmail.com
+      Etag:
+      - W/"4f53cda18c2baa0c0354bb5f9a3ecbe5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 94d38239-f860-4003-9df5-2b7b7d0aaaf0
+      X-Runtime:
+      - '0.096871'
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Mon, 12 Feb 2018 01:19:00 GMT
+recorded_with: VCR 4.0.0

@@ -27,7 +27,7 @@ module SuboxApi
         "client" => response_headers["client"],
         "expiry" => response_headers["expiry"],
         "token-type" => "bearer",
-        "uid" => response_headers["uid"],
+        "uid" => response_headers["uid"]
       }
     end
 
